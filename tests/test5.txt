@@ -1,5 +1,3 @@
-// test5 - Float
-pi = 3.14;
-radius = 5;
-area = pi * radius * radius;
-print(area);  // 78.5
+// test5 - Strings
+string name = "Alice";
+print(name);  // Alice

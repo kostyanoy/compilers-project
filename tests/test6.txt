@@ -1,4 +1,13 @@
-// test6 - Strings
-name = "Alice";
-greeting = "Hello, " + name + "!";
-print(greeting);  // Hello, Alice!
+// test6 - Block in block
+x = 10;
+y = 20;
+
+if (x > 5) {
+    if (y > 15) {
+        print("Both true");
+    } else {
+        print("Only x > 5");
+    }
+} else {
+    print("x <= 5");
+}

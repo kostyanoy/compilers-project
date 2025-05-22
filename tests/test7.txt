@@ -1,13 +1,6 @@
-// test7 - Block in block
-x = 10;
-y = 20;
+// test7 - Priority
+result = 2 + 3 * 4;    // 14, not 20
+print(result);
 
-if (x > 5) {
-    if (y > 15) {
-        print("Both true");
-    } else {
-        print("Only x > 5");
-    }
-} else {
-    print("x <= 5");
-}
+result = (2 + 3) * 4;  // 20
+print(result);

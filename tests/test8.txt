@@ -1,6 +1,5 @@
-// test8 - Priority
-result = 2 + 3 * 4;    // 14, not 20
-print(result);
-
-result = (2 + 3) * 4;  // 20
-print(result);
+// test9 - Negative
+a = -5;
+b = 10;
+c = a + b;  // 5
+print(c);
