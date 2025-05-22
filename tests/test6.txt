@@ -1,0 +1,4 @@
+// test6 - Strings
+name = "Alice";
+greeting = "Hello, " + name + "!";
+print(greeting);  // Hello, Alice!

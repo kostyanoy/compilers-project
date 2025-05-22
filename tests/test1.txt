@@ -1,0 +1,6 @@
+// test1 - Arithmetic
+int x = 10 + 5;      // 15
+int y = x - 3;       // 12
+int z = y * 2;       // 24
+int w = z / 4;       // 6.0
+print(w);

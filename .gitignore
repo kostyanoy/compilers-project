@@ -1,0 +1,14 @@
+# flex
+lex.yy.c
+
+# bison
+parser.output
+parser.tab*
+
+# output
+*output.txt
+
+
+# other
+.vscode
+*.exe
