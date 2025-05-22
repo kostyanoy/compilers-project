@@ -6,8 +6,10 @@
 // Функция для генерации кода RISC процессора
 void generate_stmt(FILE* file, Node* node);
 void generate_expr(FILE* file, Node* node, int res_reg);
+int get_variable_address(const char* name);
 
 // инициализация генератора
 void init_generator();
+
 
 #endif /* RISC_GENERATOR_H */ 

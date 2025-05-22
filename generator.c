@@ -36,6 +36,10 @@ void init_generator() {
 
 // добавить новую переменную
 int add_variable(const char* name, int size, VarType type) {
+    if (get_variable_address(name) != -1) {
+        fprintf(stderr, "Varizble %s already initialized!", name);
+        exit(-1);
+    }
     VariableEntry entry;
     entry.name = strdup(name);
     entry.address = symbol_table.memory_counter;
@@ -56,9 +60,11 @@ VarType get_var_type(const char* name) {
             return symbol_table.entries[i].type;
         }
     }
+    fprintf(stderr, "No such variable %s", name);
+    exit(-1);
 }
 
-// получить адресс переменной
+// получить адрес переменной
 int get_variable_address(const char* name) {
     for (int i = 0; i < symbol_table.count; ++i) {
         if (strcmp(symbol_table.entries[i].name, name) == 0) {
@@ -251,6 +257,7 @@ void generate_print_stmt(FILE* file, Node* node) {
     } else if (expr->type == NODE_ID && get_var_type(expr->id_name) == STRING) {
         // вывести посимвольно из памяти
         char* name = expr->id_name;
+        get_variable_address(name);
         VariableEntry var = get_variable(name);
 
         fprintf(file, "li x1, %d\n", var.address);

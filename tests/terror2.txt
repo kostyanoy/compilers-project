@@ -1,0 +1,2 @@
+string a = "Hello";
+int b = a + 1;
